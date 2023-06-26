@@ -9,8 +9,8 @@ class Pessoa:
 
 
 if __name__ == '__main__':
-    Aruana = Pessoa(nome='Aruanã')
-    eleonora = Pessoa(Aruana, nome='Eleonora')
+    aruana = Pessoa(nome='Aruanã')
+    eleonora = Pessoa(aruana, nome='Eleonora')
     print(Pessoa.cumprimentar(eleonora))
     print(id(eleonora))
     print(eleonora.cumprimentar())
@@ -18,4 +18,9 @@ if __name__ == '__main__':
     print(eleonora.idade)
     for filho in eleonora.filhos:
         print(filho.nome)
+    eleonora.sobrenome = 'Alves'
+    del eleonora.filhos
+    print(eleonora.sobrenome)
+    print(eleonora.__dict__)
+    print(aruana.__dict__)
 
